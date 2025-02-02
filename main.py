@@ -1,5 +1,6 @@
 import os
 from markdown import markdown
+import unittest
 
 def read_posts(directory):
     posts = []
