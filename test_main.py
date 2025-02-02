@@ -1,3 +1,4 @@
+import os  # Added import statement for os module
 import pytest
 from main import read_posts, render_posts
 
@@ -8,14 +9,14 @@ class TestMainFunctions:
         os.makedirs(self.test_directory, exist_ok=True)
 
     def tearDown(self):
-        for filename in os.listdir(self.test_directory):
+        for filename in os.listdir(self.test_directory):  # Fixed the undefined name error
             if filename.endswith(".md"):
                 os.remove(os.path.join(self.test_directory, filename))
-        os.rmdir(self.test_directory)
+        os.rmdir(self.test_directory)  # Fixed the undefined name error
 
     def test_read_posts(self):
         # Create a sample post
-        with open(os.path.join("tests/test_posts", "sample1.md"), 'w', encoding='utf-8') as file:
+        with open(os.path.join("tests/test_posts", "sample1.md"), 'w', encoding='utf-8') as file:  # Fixed the undefined name error
             file.write("# Sample Post 1\nThis is the content of the first post.")
 
         posts = read_posts("tests/test_posts")
@@ -25,7 +26,7 @@ class TestMainFunctions:
 
     def test_render_posts(self):
         # Create a sample post
-        with open(os.path.join("tests/test_posts", "sample2.md"), 'w', encoding='utf-8') as file:
+        with open(os.path.join("tests/test_posts", "sample2.md"), 'w', encoding='utf-8') as file:  # Fixed the undefined name error
             file.write("# Sample Post 2\nThis is the content of the second post.")
 
         posts = read_posts("tests/test_posts")
