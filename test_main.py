@@ -1,7 +1,7 @@
-import unittest
+import pytest
 from main import read_posts, render_posts
 
-class TestMainFunctions(unittest.TestCase):
+class TestMainFunctions:
 
     def setUp(self):
         self.test_directory = "tests/test_posts"
@@ -19,9 +19,9 @@ class TestMainFunctions(unittest.TestCase):
             file.write("# Sample Post 1\nThis is the content of the first post.")
 
         posts = read_posts("tests/test_posts")
-        self.assertEqual(len(posts), 1)
-        self.assertEqual(posts[0][0], "sample1")
-        self.assertIn("<h1>Sample Post 1</h1>", posts[0][1])
+        assert len(posts) == 1
+        assert posts[0][0] == "sample1"
+        assert "<h1>Sample Post 1</h1>" in posts[0][1]
 
     def test_render_posts(self):
         # Create a sample post
@@ -32,8 +32,8 @@ class TestMainFunctions(unittest.TestCase):
         rendered_html = render_posts(posts)
         
         # Check if the HTML contains the expected structure
-        self.assertIn("<h2>sample2</h2>", rendered_html)
-        self.assertIn("<div><h1>Sample Post 2</h1>This is the content of the second post.</div>", rendered_html)
+        assert "<h2>sample2</h2>" in rendered_html
+        assert "<div><h1>Sample Post 2</h1>This is the content of the second post.</div>" in rendered_html
 
-if __name__ == '__main__':
-    unittest.main()
+if __name__ == "__main__":
+    pytest.main()
