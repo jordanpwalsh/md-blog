@@ -24,7 +24,7 @@ class TestMainFunctions:
             file.write("# Sample Post 1\nThis is the content of the first post.")
 
         posts = read_posts("tests/test_posts")
-        print(posts[0][1])
+        print(posts[0])
         assert len(posts) == 2
 
         assert posts[0][0] == "Sample Post Title 2"

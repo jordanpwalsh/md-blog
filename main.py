@@ -11,13 +11,13 @@ def read_posts(directory):
     for filename in sorted(os.listdir(directory), reverse=True):
         if filename.endswith(".md"):
             with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
+                print(f"Reading file: {filename}")
                 content = file.read()
-                html_content = markdown(content)
                 filename_parts = filename.split("_")
                 post_date = filename_parts[0]
                 post_title = filename_parts[1][:-3]
-                posts.append((post_title, post_date, html_content))
-    print(posts)
+                post_content = markdown(content)
+                posts.append((post_title, post_date, post_content))
     return posts
 
 def render_posts(posts):
@@ -26,8 +26,5 @@ def render_posts(posts):
     return html
 
 if __name__ == "__main__":
-    # Changed the greeting from "Hello" to "Hey"
-    print("Generating blog posts...")
-
     posts = read_posts("posts")
     print(render_posts(posts))
