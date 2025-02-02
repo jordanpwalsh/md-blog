@@ -19,5 +19,8 @@ def render_posts(posts):
     return html
 
 if __name__ == "__main__":
+    # Changed the greeting from "Hello" to "Hey"
+    print("Hey! Here are your blog posts:")
+    
     posts = read_posts("/posts")
     print(render_posts(posts))
