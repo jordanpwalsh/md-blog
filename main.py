@@ -1,4 +1,5 @@
 import os
+import sys
 from markdown import markdown
 from jinja2 import Template
 from io import StringIO
@@ -11,7 +12,7 @@ def read_posts(directory):
     for filename in sorted(os.listdir(directory), reverse=True):
         if filename.endswith(".md"):
             with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
-                print(f"Reading file: {filename}")
+                print(f"Reading file: {filename}", file=sys.stderr)
                 content = file.read()
                 filename_parts = filename.split("_")
                 post_date = filename_parts[0]

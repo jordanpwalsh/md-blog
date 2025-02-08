@@ -1,13 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Blog</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    {% for post in posts %}
-        <h2>{{ post.title }}</h2>
-        <div>{{ post.content | safe }}</div>
-    {% endfor %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Minimal Blog</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <!-- Header with navigation links -->
+      <header>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/resume.html" target="_blank">Resume</a>
+        </nav>
+      </header>
+
+    <!-- Brief intro about you -->
+    <section class="intro">
+        <h1>Jordan Walsh</h1>
+        <p>Hello! I'm Jordan - Software Engineer, husband and father. This is a personal blog where I share my thoughts, projects, and updates.</p>
+    </section>
+
+    <!-- Placeholder for rendered blog posts -->
+    <section id="posts">
+        
+        <article>
+            <h4> 2025-02-07</h4>
+            <div>
+                <h1>Tackling Complex Problems With a Problem Stack</h1>
+<p>Here is an approach to tackling complex and unknown problems - The problem stack.
+Recall that many computer architectures, languages, and runtimes use a call stack
+in order to enable things like memory management, exception handling, and recursion.</p>
+            </div>
+        </article>
+        
+        <article>
+            <h4> 2025-02-05</h4>
+            <div>
+                <p>Does the markdown generator do code formatting?
+<code>python
+def test()
+    does_formattting_work(arg1=True)
+    if test:
+        print(f"Hello!")</code></p>
+<p>lists?
+- list item
+    - test
+- hello world</p>
+            </div>
+        </article>
+        
+        <article>
+            <h4> 2024-01-25</h4>
+            <div>
+                <h1>Sample Post 1</h1>
+<p>This is the content of the first post.</p>
+            </div>
+        </article>
+        
+    </section>
 </body>
 </html>

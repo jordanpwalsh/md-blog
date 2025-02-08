@@ -8,17 +8,37 @@ TEMPLATE = """
     <!DOCTYPE html>
     <html lang="en">
     <head>
-    <title>Blog</title>
-    <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Minimal Blog</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-    {% for title, date, content in posts %}
-    <h2>{{ title }}</h2>
-    <h4> {{ date }}</h4>
-        <div>
-            {{ content }}
-        </div>
-    {% endfor %}
-    </body>
-    </html>
+    <!-- Header with navigation links -->
+      <header>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/resume.html" target="_blank">Resume</a>
+        </nav>
+      </header>
+
+    <!-- Brief intro about you -->
+    <section class="intro">
+        <h1>Jordan Walsh</h1>
+        <p>Hello! I'm Jordan - Software Engineer, husband and father. This is a personal blog where I share my thoughts, projects, and updates.</p>
+    </section>
+
+    <!-- Placeholder for rendered blog posts -->
+    <section id="posts">
+        {% for title, date, content in posts %}
+        <article>
+            <h4> {{ date }}</h4>
+            <div>
+                {{ content }}
+            </div>
+        </article>
+        {% endfor %}
+    </section>
+</body>
+</html>
 """
