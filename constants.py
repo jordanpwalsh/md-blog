@@ -12,6 +12,7 @@ TEMPLATE = """
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My Minimal Blog</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="syntax.css"> 
     </head>
     <body>
     <!-- Header with navigation links -->
@@ -22,13 +23,13 @@ TEMPLATE = """
         </nav>
       </header>
 
-    <!-- Brief intro about you -->
+    <!-- Brief intro -->
     <section class="intro">
         <h1>Jordan Walsh</h1>
         <p>Hello! I'm Jordan - Software Engineer, husband and father. This is a personal blog where I share my thoughts, projects, and updates.</p>
     </section>
 
-    <!-- Placeholder for rendered blog posts -->
+    <!-- rendered blog posts -->
     <section id="posts">
         {% for title, date, content in posts %}
         <article>

@@ -17,7 +17,14 @@ def read_posts(directory):
                 filename_parts = filename.split("_")
                 post_date = filename_parts[0]
                 post_title = filename_parts[1][:-3]
-                post_content = markdown(content)
+                post_content = markdown(content, extensions=[
+                    "extra",
+                    "fenced_code",   # Enables triple-backtick code blocks
+                    "tables",        # Enables Markdown tables
+                    "toc",           # Adds a Table of Contents
+                    "sane_lists",    # Improves list handling
+                    "codehilite"    # Enables syntax highlighting
+                ])
                 posts.append((post_title, post_date, post_content))
     return posts
 

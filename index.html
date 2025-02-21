@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My Minimal Blog</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="syntax.css"> 
     </head>
     <body>
     <!-- Header with navigation links -->
@@ -16,19 +17,19 @@
         </nav>
       </header>
 
-    <!-- Brief intro about you -->
+    <!-- Brief intro -->
     <section class="intro">
         <h1>Jordan Walsh</h1>
         <p>Hello! I'm Jordan - Software Engineer, husband and father. This is a personal blog where I share my thoughts, projects, and updates.</p>
     </section>
 
-    <!-- Placeholder for rendered blog posts -->
+    <!-- rendered blog posts -->
     <section id="posts">
         
         <article>
             <h4> 2025-02-07</h4>
             <div>
-                <h1>Tackling Complex Problems With a Problem Stack</h1>
+                <h1 id="tackling-complex-problems-with-a-problem-stack">Tackling Complex Problems With a Problem Stack</h1>
 <p>Here is an approach to tackling complex and unknown problems - The problem stack.
 Recall that many computer architectures, languages, and runtimes use a call stack
 in order to enable things like memory management, exception handling, and recursion.</p>
@@ -38,23 +39,28 @@ in order to enable things like memory management, exception handling, and recurs
         <article>
             <h4> 2025-02-05</h4>
             <div>
-                <p>Does the markdown generator do code formatting?
-<code>python
-def test()
-    does_formattting_work(arg1=True)
-    if test:
-        print(f"Hello!")</code></p>
-<p>lists?
-- list item
-    - test
-- hello world</p>
+                <h1 id="format-testing">Format Testing</h1>
+<p>Does the markdown generator do code formatting?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span>
+    <span class="n">does_formattting_work</span><span class="p">(</span><span class="n">arg1</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">test</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>List test</p>
+<ul>
+<li>This is a List</li>
+<li>this is another list item</li>
+</ul>
+<p>Images</p>
+<p>![[Avatar.jpg]]</p>
             </div>
         </article>
         
         <article>
             <h4> 2024-01-25</h4>
             <div>
-                <h1>Sample Post 1</h1>
+                <h1 id="sample-post-1">Sample Post 1</h1>
 <p>This is the content of the first post.</p>
             </div>
         </article>

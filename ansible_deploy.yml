@@ -1,0 +1,26 @@
+- name: Build md-blog
+  hosts: localhost
+  become: no
+  tasks:
+    - name: Build image
+      containers.podman.podman_image:
+        name: images.jordanwal.sh/md-blog
+        tag: latest
+        path: .
+        state: build
+        force: true
+        push: true
+
+- name: Deploy md-blog
+  hosts: narnia
+  become: yes
+  tasks:
+    - name: Restart md-blog service
+      ansible.builtin.systemd:
+        name: md-blog
+        state: restarted
+
+
+#python main.py > index.html
+#podman build -t images.jordanwal.sh/md-blog .
+#podman push images.jordanwal.sh/md-blog:latest

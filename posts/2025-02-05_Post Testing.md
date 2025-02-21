@@ -1,4 +1,7 @@
+# Format Testing
+
 Does the markdown generator do code formatting?
+
 ```python
 def test()
 	does_formattting_work(arg1=True)
@@ -6,8 +9,11 @@ def test()
 		print(f"Hello!")
 ```
 
-lists?
-- list item
-	- test
-- hello world
+List test
 
+- This is a List
+- this is another list item
+
+Images
+
+![Avatar.jpg](images/Avatar.jpg)
