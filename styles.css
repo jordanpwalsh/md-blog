@@ -3,23 +3,43 @@ body {
   font-family: Arial, sans-serif;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
   line-height: 1.6;
 }
+
 header {
   margin-bottom: 20px;
 }
+
 nav a {
   margin-right: 15px;
   text-decoration: none;
   color: #007acc;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
-.intro {
-  margin-bottom: 40px;
+
+.container {
+    display: flex;
+    min-height: 100vh;
 }
+
+.sidebar {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.content {
+    width: 80%;
+    padding: 20px
+}
+
+.intro {
+  margin-bottom: 20px;
+}
+
 #posts article {
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;

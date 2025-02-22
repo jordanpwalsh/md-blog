@@ -1,10 +1,7 @@
 import os
 import sys
 from markdown import markdown
-from jinja2 import Template
-from io import StringIO
-
-from constants import TEMPLATE
+from jinja2 import Environment, FileSystemLoader
 
 
 def read_posts(directory):
@@ -29,7 +26,8 @@ def read_posts(directory):
     return posts
 
 def render_posts(posts):
-    template = Template(TEMPLATE)
+    env = Environment(loader=FileSystemLoader("skel"))
+    template = env.get_template("template.html")
     html = template.render(posts=posts)
     return html
 

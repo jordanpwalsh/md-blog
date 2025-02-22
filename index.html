@@ -1,6 +1,5 @@
-
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,20 +7,21 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" type="text/css" href="syntax.css"> 
     </head>
-    <body>
+<body>
     <!-- Header with navigation links -->
-      <header>
+    <header>
         <nav>
-          <a href="/">Home</a>
-          <a href="/resume.html" target="_blank">Resume</a>
+            <a href="/">Home</a>
+            <a href="/resume.html" target="_blank">Resume</a>
         </nav>
-      </header>
+    </header>
 
     <!-- Brief intro -->
     <section class="intro">
         <h1>Jordan Walsh</h1>
         <p>Hello! I'm Jordan - Software Engineer, husband and father. This is a personal blog where I share my thoughts, projects, and updates.</p>
     </section>
+    <br>
 
     <!-- rendered blog posts -->
     <section id="posts">
@@ -41,11 +41,11 @@ in order to enable things like memory management, exception handling, and recurs
             <div>
                 <h1 id="format-testing">Format Testing</h1>
 <p>Does the markdown generator do code formatting?</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span>
-    <span class="n">does_formattting_work</span><span class="p">(</span><span class="n">arg1</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">test</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code class="language-python">def test()
+    does_formattting_work(arg1=True)
+    if test:
+        print(f&quot;Hello!&quot;)
+</code></pre>
 
 <p>List test</p>
 <ul>
@@ -53,7 +53,7 @@ in order to enable things like memory management, exception handling, and recurs
 <li>this is another list item</li>
 </ul>
 <p>Images</p>
-<p>![[Avatar.jpg]]</p>
+<p><img alt="Avatar.jpg" src="images/Avatar.jpg" /></p>
             </div>
         </article>
         
@@ -68,3 +68,4 @@ in order to enable things like memory management, exception handling, and recurs
     </section>
 </body>
 </html>
+
