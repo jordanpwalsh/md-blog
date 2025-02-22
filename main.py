@@ -7,6 +7,9 @@ from jinja2 import Environment, FileSystemLoader
 def read_posts(directory):
     posts = []
     for filename in sorted(os.listdir(directory), reverse=True):
+        if 'draft' in filename.lower():
+            print(f"Skipping draft post: {filename}", file=sys.stderr)
+            continue
         if filename.endswith(".md"):
             with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
                 print(f"Reading file: {filename}", file=sys.stderr)

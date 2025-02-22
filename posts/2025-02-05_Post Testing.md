@@ -1,5 +1,8 @@
 # Format Testing
 
+These blog posts are generated from markdown files. Below are some formatting
+tests. 
+
 Does the markdown generator do code formatting?
 
 ```python
